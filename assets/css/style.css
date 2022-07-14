@@ -1,0 +1,776 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@300;600&family=Ubuntu:wght@400;500;700&display=swap');
+
+:root {
+    /*##Colors##
+Primary*/
+    --lightRedCTAText: hsl(356, 100%, 66%);
+    --veryLightRredCTAHoverBackground: hsl(355, 100%, 74%);
+    --veryDarkBlueHeadings: hsl(208, 49%, 24%);
+    /*Neutral*/
+    --whiteText: hsl(0, 0%, 100%);
+    --openMenuBackground: hsl(240, 7%, 94%);
+    --grayishBlueFooterText: hsl(240, 2%, 79%);
+    --veryDarkGrayishBlueBodyCopy: hsl(207, 13%, 34%);
+    --veryDarkBlackBlueFooterBackground: hsl(240, 10%, 16%);
+    /*##Gradient##
+Background gradient - Intro/CTA mobile nav:*/
+    --veryLightRed: hsl(13, 100%, 72%);
+    --lightRed: hsl(353, 100%, 62%);
+
+    /*Background gradient - body:*/
+    --veryDarkGrayBlue: hsl(237, 17%, 21%);
+    --veryDarkDesaturatedBlue: hsl(237, 23%, 32%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 16px;
+    scrollbar-width: thin;
+    scrollbar-color: var(--grayishBlueFooterText) var(--lightRed);
+}
+
+
+*::-webkit-scrollbar {
+    width: 10px;
+}
+
+*::-webkit-scrollbar-track {
+    background-color: var(--grayishBlueFooterText);
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: var(--lightRedCTAText);
+    border-radius: 5px;
+    border: 2px solid var(--grayishBlueFooterText);
+}
+
+main {
+    max-width: 1440px;
+    width: 100%;
+}
+
+header {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(to right, var(--veryLightRed), var(--lightRed));
+    border-bottom-left-radius: 95px;
+}
+
+.header--background {
+    background-image: url('../images/bg-pattern-intro-desktop.svg');
+    background-position: center;
+    border-bottom-left-radius: 95px;
+}
+
+.header--top {
+    max-width: 1140px;
+    width: 100%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    padding-top: 60px;
+    margin-bottom: 127px;
+}
+
+.header--logo {
+    margin-left: 25px;
+    margin-right: 66px;
+}
+
+.header--nav {
+    display: flex;
+    color: var(--whiteText);
+    margin-right: 377px;
+    align-content: center;
+    justify-content: center;
+    position: relative;
+}
+
+details {
+    list-style: none;
+    cursor: pointer;
+    margin-right: 32px;
+    position: relative;
+}
+
+
+summary {
+    height: 10px;
+    display: flex;
+    align-items: center;
+    outline: 0;
+}
+
+summary::marker {
+    content: '';
+}
+
+summary:hover {
+    text-decoration: underline;
+}
+
+.arrow {
+    background-image: url('../images/icon-arrow-light.svg');
+    width: 10px;
+    height: 10px;
+    background-repeat: no-repeat;
+    transition: all ease 0.2s;
+    margin: 2px 0 0 5px;
+}
+
+details ul {
+    width: 168px;
+    position: absolute;
+    list-style: none;
+    background-color: var(--whiteText);
+    top: 46px;
+    padding: 32px 75px 29px 24px;
+    left: -24px;
+    border-radius: 5px;
+}
+
+
+#menu1 li,
+#menu2 li,
+#menu3 li {
+    margin-top: 13px;
+    font-family: 'Overpass';
+    font-weight: 600;
+    width: 100%;
+    color: black;
+}
+
+#menu1 li:first-child,
+#menu2 li:first-child,
+#menu3 li:first-child {
+    margin-top: 0px;
+}
+
+
+#menu1 li:hover,
+#menu2 li:hover,
+#menu3 li:hover {
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.nav--menu--product,
+.nav--menu--company,
+.nav--menu--connect {
+    display: block;
+    font-family: 'Ubuntu';
+    font-weight: 500;
+    font-size: 16px;
+    margin-right: 3px;
+}
+
+.nav--menu {
+    display: flex;
+    flex-direction: column;
+}
+
+.menu--icon {
+    display: none;
+}
+
+.menu--close {
+    display: none;
+}
+
+.header--cta {
+    display: flex;
+    align-content: center;
+}
+
+.button--login {
+    border: none;
+    background-color: transparent;
+    color: var(--whiteText);
+    padding: 15px 20px;
+    margin-right: 14px;
+    font-family: 'Overpass';
+    font-weight: 700;
+}
+
+.button--signup {
+    border: none;
+    background-color: var(--whiteText);
+    color: var(--lightRedCTAText);
+    padding: 15px 39px;
+    border-radius: 30px;
+    font-family: 'Overpass';
+    font-weight: 700;
+}
+
+.header--bottom {
+    display: flex;
+    flex-direction: column;
+    max-width: 1140px;
+    margin: auto;
+    text-align: center;
+}
+
+.header--bottom h1 {
+    color: var(--whiteText);
+    font-family: 'Overpass';
+    font-size: 60px;
+    font-weight: 700;
+    letter-spacing: -0.7px;
+    margin-left: 15px;
+}
+
+.header--bottom span {
+    display: block;
+    color: var(--whiteText);
+    font-size: 20px;
+    font-family: 'Overpass';
+    margin-left: 18px;
+    margin-top: 14px;
+    margin-bottom: 45px;
+}
+
+.header--bottom--buttons {
+    margin-left: 17px;
+    margin-bottom: 152px;
+}
+
+.button--start {
+    border: 1px solid transparent;
+    border-radius: 30px;
+    background-color: var(--whiteText);
+    color: var(--lightRedCTAText);
+    padding: 15px 12px;
+    font-size: 17px;
+    font-weight: 700;
+    margin-right: 14px;
+}
+
+.button--learn {
+    border: 1px solid var(--whiteText);
+    border-radius: 30px;
+    background-color: transparent;
+    color: var(--whiteText);
+    padding: 13px 20px;
+    font-size: 17px;
+    font-weight: 700;
+}
+
+.button--login:hover,
+.button--signup:hover,
+.button--start:hover,
+.button--learn:hover {
+    cursor: pointer;
+}
+
+.button--signup:hover,
+.button--start:hover {
+    background-color: var(--veryLightRredCTAHoverBackground);
+    color: var(--whiteText);
+    transition: all ease 0.5s;
+}
+
+.button--learn:hover {
+    background-color: var(--whiteText);
+    color: var(--lightRedCTAText);
+    transition: all ease 0.5s;
+}
+
+.section--top {
+    display: flex;
+    flex-direction: column;
+    margin-top: 154px;
+}
+
+.section--top--headings {
+    width: 100%;
+    text-align: center;
+}
+
+.section--top--content {
+    display: grid;
+    grid-template-columns: 790px 1fr;
+    height: 755px;
+}
+
+.section--top--img {
+    grid-row: 1 / 2;
+    grid-column: 2 / 3;
+    flex: 1;
+    background-image: url('../images/illustration-editor-desktop.svg');
+    background-repeat: no-repeat;
+    position: relative;
+    top: -133px;
+    height: 885px;
+}
+
+
+.section--top--text {
+    grid-row: 1 / 2;
+    grid-column: 1 / 2;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 104px 90px 0 164px;
+    padding-right: 255px;
+}
+
+.section--top--headings h1 {
+    font-size: 40px;
+    font-family: 'Overpass';
+    font-weight: 700;
+    color: var(--veryDarkBlueHeadings);
+    letter-spacing: -1.6px;
+    margin-left: 12px;
+}
+
+
+.section--top--text h2 {
+    font-size: 28px;
+    font-family: 'Overpass';
+    color: var(--veryDarkBlueHeadings);
+    letter-spacing: -0.2px;
+    margin-bottom: 24px;
+}
+
+.section--top--text h3 {
+    font-size: 28px;
+    font-family: 'Overpass';
+    color: var(--veryDarkBlueHeadings);
+    letter-spacing: -0.2px;
+    margin: 78px 0 24px 0;
+}
+
+.section--top--text span {
+    font-family: 'Ubuntu';
+    letter-spacing: 0.25px;
+    line-height: 1.7;
+}
+
+.section--middle {
+    display: grid;
+    grid-template-columns: 545px 1fr;
+    height: 399px;
+    background-image: url('../images/bg-pattern-circles.svg');
+    background-repeat: no-repeat;
+    background-position: -213px -511px;
+    background-color: var(--veryDarkDesaturatedBlue);
+    color: white;
+    border-bottom-left-radius: 100px;
+    border-top-right-radius: 100px;
+    margin: 53px 0 115px 0;
+    position: relative;
+}
+
+.section--middle--img {
+    grid-row: 1 / 2;
+    grid-column: 1 / 2;
+    height: 526px;
+    background-image: url('../images/illustration-phones.svg');
+    background-repeat: no-repeat;
+    position: relative;
+    left: 126px;
+    top: -70px;
+}
+
+.section--middle--text {
+    grid-row: 1 / 2;
+    grid-column: 2 / 3;
+    margin: 103px 0 0 190px;
+    padding-right: 146px;
+}
+
+.section--middle--text h1 {
+    font-size: 38px;
+    font-family: 'Overpass';
+    color: var(--whiteText);
+    letter-spacing: -0.6px;
+    margin: 10px 0 20px 0;
+}
+
+.section--middle--text span {
+    font-family: 'Ubuntu';
+    font-size: 15px;
+    letter-spacing: 0.7px;
+    line-height: 1.9;
+}
+
+.section--bottom {
+    display: grid;
+    grid-template-columns: 1fr 522px;
+    grid-template-rows: 1fr;
+    position: relative;
+    height: 800px;
+}
+
+.section--bottom--img {
+    grid-row: 1 / 2;
+    grid-column: 1 / 2;
+    width: 100%;
+    background-image: url('../images/illustration-laptop-desktop.svg');
+    background-repeat: no-repeat;
+    position: relative;
+    left: -279px;
+}
+
+
+.section--bottom--text {
+    grid-row: 1 / 2;
+    grid-column: 2 / 3;
+    margin-top: 188px;
+    margin-left: -166px;
+    width: 688px;
+    padding-right: 150px;
+}
+
+.section--bottom--text h1 {
+    font-size: 28px;
+    font-family: 'Overpass';
+    color: var(--veryDarkBlueHeadings);
+    letter-spacing: -0.2px;
+    margin-bottom: 24px;
+}
+
+.section--bottom--text h2 {
+    font-size: 28px;
+    font-family: 'Overpass';
+    color: var(--veryDarkBlueHeadings);
+    letter-spacing: -0.2px;
+    margin-bottom: 24px;
+    margin-top: 79px;
+}
+
+.section--bottom--text span {
+    font-family: 'Ubuntu';
+    letter-spacing: 0.25px;
+    line-height: 1.7;
+}
+
+footer {
+    background-color: var(--veryDarkBlackBlueFooterBackground);
+    display: flex;
+    padding: 71px 0 63px 165px;
+    margin-top: 109px;
+    height: auto;
+    border-top-right-radius: 100px;
+}
+
+.footer--logo {
+    margin-right: 185px;
+}
+
+.footer--menu {
+    list-style: none;
+    margin: 6px 200px 0 -2px;
+    letter-spacing: -0.3px;
+}
+
+.footer--menu:last-child {
+    margin-left: 18px;
+}
+
+.footer--menu--name {
+    font-family: 'Ubuntu';
+    font-weight: 500;
+    font-size: 16px;
+    color: var(--whiteText);
+    display: block;
+    margin-bottom: 37px;
+}
+
+.footer--menu--item {
+    color: var(--grayishBlueFooterText);
+    cursor: pointer;
+    font-family: 'Ubuntu';
+    margin-bottom: 15px;
+}
+
+.footer--menu--item:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+@media(max-width:375px) {
+    .header--top {
+        margin: -6px 0 110px -2px;
+    }
+
+    .header--logo img {
+        width: 85px;
+    }
+
+    .header--bottom h1 {
+        font-size: 35px;
+        margin-left: 0;
+        padding: 0 37px;
+    }
+
+    .header--bottom span {
+        font-size: 18px;
+        letter-spacing: 0.05px;
+        padding: 0 25px;
+        margin-left: 0;
+    }
+
+    .header--bottom--buttons {
+        margin-left: 0;
+    }
+
+    .header--nav {
+        display: none;
+        position: absolute;
+        top: 125px;
+        left: 24px;
+        background-color: var(--whiteText);
+        width: 324px;
+        height: 512px;
+        border-radius: 5px;
+        z-index: 9;
+        box-shadow: 2px 4px 12px rgb(100, 100, 100);
+        flex-direction: column;
+        text-align: center;
+        opacity: 0;
+        transition: all ease 0.2s;
+    }
+
+    details {
+        margin-bottom: 43px;
+        top: -140px;
+        left: 120px;
+    }
+
+    .arrow {
+        background-image: url('../images/icon-arrow-dark.svg');
+    }
+
+    .nav--menu--company,
+    .nav--menu--connect,
+    .nav--menu--product {
+        font-size: 18px;
+        color: var(--veryDarkGrayBlue);
+    }
+
+    details ul {
+        left: -96px;
+        top: 37px;
+        background-color: var(--openMenuBackground);
+        width: 275px;
+        height: auto;
+        text-align: center;
+        padding: 32px 0 29px;
+        z-index: 99;
+    }
+
+    #menu1 li,
+    #menu2 li,
+    #menu3 li {
+        color: var(--veryDarkGrayishBlueBodyCopy);
+        margin-top: 20px;
+        font-weight: 700;
+    }
+
+    #menu1 li:first-child,
+    #menu2 li:first-child,
+    #menu3 li:first-child {
+        margin-top: -5px;
+    }
+
+    .header--cta {
+        display: none;
+        position: absolute;
+        border-top: 1px solid var(--veryDarkDesaturatedBlue);
+        top: 479px;
+        flex-direction: column;
+        left: 49px;
+        width: 280px;
+        z-index: 15;
+        opacity: 0;
+        transition: all ease 0.2s;
+    }
+
+    .button--signup {
+        background-color: var(--veryLightRredCTAHoverBackground);
+        color: var(--whiteText);
+        transition: all ease 0.5s;
+        width: 138px;
+        margin-left: 70px;
+        padding: 15px 30px;
+    }
+
+    .button--login {
+        color: var(--veryDarkGrayBlue);
+        margin-right: 0;
+        margin-left: -6px;
+        font-size: 18px;
+        margin-top: 18px;
+        margin-bottom: 5px;
+    }
+
+    .menu--icon {
+        display: block;
+        margin-left: 145px;
+    }
+
+    .menu--close {
+        display: none;
+        margin-left: 145px;
+    }
+
+    .section--top {
+        margin-top: 102px;
+    }
+
+    .section--top--headings h1 {
+        font-size: 29px;
+        letter-spacing: -1.6px;
+        margin-left: 0;
+    }
+
+    .section--top--content {
+        grid-template-columns: 1fr;
+        grid-template-rows: 380px auto;
+        height: auto;
+    }
+
+    .section--top--img {
+        background-image: url('../images/illustration-editor-mobile.svg');
+        width: 100%;
+        height: auto;
+        margin: 43px 0 0 -15px;
+        position: static;
+        grid-column: 1 / 2;
+    }
+
+    .section--top--text {
+        margin: 41px 0 0px 0px;
+        width: 100%;
+        padding: 0 29px;
+        text-align: center;
+        grid-row: 2/3;
+    }
+
+    .section--top--text h2 {
+        margin: 2px 0 12px 10px;
+        line-height: 1.2;
+        letter-spacing: -0.3px;
+    }
+
+    .section--top--text h3 {
+        margin: 42px 0 23px 8px;
+        font-size: 27px;
+        letter-spacing: 0.3px;
+    }
+
+    .section--top--text span {
+        margin: -2px 0 2px 9px;
+        line-height: 1.75;
+    }
+
+    .section--middle {
+        grid-template-columns: 1fr;
+        grid-template-rows: 400px 1fr;
+        height: 625px;
+        margin: 266px 0 0 0;
+        background-position: -124px -257px;
+        background-size: cover;
+    }
+
+    .section--middle--img {
+        position: static;
+        height: 400px;
+        background-size: 100%;
+        margin: -186px 0 0 -2px;
+    }
+
+    .section--middle--text {
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;
+        margin: -184px 0 0 0;
+        text-align: center;
+        padding: 0 30px;
+    }
+
+    .section--middle--text span {
+        margin: -3px 0 0 -2px;
+        display: block;
+    }
+
+    .section--bottom {
+        grid-template-columns: 1fr;
+        grid-template-rows: 380px 1fr;
+        margin-top: 52px;
+        width: 100%;
+        height: auto;
+    }
+
+    .section--bottom--img {
+        position: static;
+        background-image: url(../images/illustration-laptop-mobile.svg);
+        width: 100%;
+        background-position: center;
+    }
+
+    .section--bottom--text {
+        grid-row: 2 / 3;
+        grid-column: 1 / 2;
+        margin: 26px 0 0 0;
+        text-align: center;
+        padding: 0px 0px;
+        width: 100%;
+    }
+
+    .section--bottom--text h1 {
+        margin-left: 11px;
+    }
+
+    .section--bottom--text h2 {
+        margin-top: 40px;
+        margin-left: 9px;
+    }
+
+    .section--bottom--text span {
+        display: block;
+        font-size: 15px;
+        line-height: 1.87;
+        letter-spacing: 0.73px;
+        margin-left: 11px;
+        padding: 0 22px 0 22px;
+    }
+
+    footer {
+        margin-top: 93px;
+        padding: 70px 50px;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer--logo {
+        margin: 6px 0 0 0;
+    }
+
+    .footer--menu {
+        margin: 75px 0 0 0;
+    }
+
+    .footer--menu:nth-child(3) {
+        margin-top: 40px;
+    }
+
+    .footer--menu:last-child {
+        margin-left: 0;
+        margin-top: 40px;
+    }
+
+    .footer--menu--name {
+        font-size: 18px;
+        margin-bottom: 33px;
+    }
+
+    .footer--menu--item {
+        font-size: 19px;
+        margin-bottom: 10px;
+    }
+}
